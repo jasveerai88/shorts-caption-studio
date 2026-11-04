@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.captioned.mp4
+.venv/
+venv/
+.DS_Store
+# the demo video is generated, not committed — rebuild it with
+# python3 examples/make_examples.py
+examples/*.mp4

@@ -1,5 +1,39 @@
 # Changelog
 
+## v1.0.0 — 2026-11-04
+
+The professional release. The engine is unchanged — same parser,
+same estimated word split, same styles, same exit codes — rebuilt
+to the standard of a tool you install once and keep.
+
+- **Installable package.** `pyproject.toml` with the console entry
+  point `shorts-caption-studio`. Install with pipx or pip from the
+  GitHub repo (`pipx install
+  git+https://github.com/jasveerai88/shorts-caption-studio`);
+  running the source checkout directly still works. Verified: a
+  clean-venv install followed by the README quickstart produces
+  output byte-identical to the source runs, exit codes included.
+- **README as a landing page.** The before/after leads (frames from
+  a real render of the bundled example), the honest limits moved up
+  front — no transcription, SRT-in only, no timing repair, and word
+  timing ESTIMATED, labelled in every report — and a comparison
+  table scoped to the caption step against the named subscription
+  alternative (Submagic Starter $19/member/month for 15 videos,
+  submagic.co/pricing read 2026-11-04).
+- **Demo GIF** built from real runs (the bundled SRT styled, the
+  actual render's frames before/after, the broken-cue run), and a
+  social preview image.
+- **New bundled fixture `examples/messy.srt`** — a 4-cue SRT with a
+  reversed cue and an empty cue, so the skipped-cue warnings and
+  exit code 1 are reproducible verbatim from the README.
+- **`SECURITY.md`** and issue templates: bug reports use the
+  minimal-repro standard (attach the SRT, not your unreleased
+  video).
+- **`SKILL.md`** updated to the installed command and the git+
+  install.
+- No behaviour changes; version strings only. 43 tests, all
+  passing.
+
 ## v0.1.0 — 2026-11-04
 
 First release.

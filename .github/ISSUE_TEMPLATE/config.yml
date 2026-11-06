@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a vulnerability (private)
+    url: https://github.com/jasveerai88/shorts-caption-studio/security/advisories/new
+    about: Please report security issues privately, not as public issues.

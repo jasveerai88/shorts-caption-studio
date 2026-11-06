@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shorts-caption-studio"
+version = "1.0.0"
+description = "Burn animated word-by-word highlight captions (pop / karaoke / clean) into vertical video from an SRT transcript, locally and free — or emit just the styled .ass sidecar. Pure Python standard library; word timing inside each cue is ESTIMATED from cue-level SRT and labelled as such."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Jasveer Singh" },
+]
+keywords = [
+    "captions",
+    "subtitles",
+    "shorts",
+    "tiktok",
+    "reels",
+    "srt",
+    "ass",
+    "ffmpeg",
+    "cli",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/jasveerai88/shorts-caption-studio"
+Repository = "https://github.com/jasveerai88/shorts-caption-studio"
+Issues = "https://github.com/jasveerai88/shorts-caption-studio/issues"
+
+[project.scripts]
+shorts-caption-studio = "shorts_caption_studio:main"
+
+# The implementation is a single standard-library module in
+# src/; it is installed as the top-level module
+# `shorts_caption_studio`, and `python3 src/shorts_caption_studio.py`
+# keeps working from a checkout. Burn-in shells out to the system
+# ffmpeg/ffprobe (external tools, never Python dependencies).
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["shorts_caption_studio"]

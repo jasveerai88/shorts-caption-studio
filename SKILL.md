@@ -1,9 +1,22 @@
 ---
 name: shorts-caption-studio
-description: Burn animated word-by-word highlight captions (pop / karaoke / clean styles) into vertical video from an SRT transcript, or emit just the styled .ass sidecar. Use when a finished vertical video (Shorts / TikTok / Reels) needs burned-in animated captions locally, or when an .ass with per-word highlight events is needed for another renderer. Word timing inside each cue is ESTIMATED from cue-level SRT — never present it as true word-level alignment.
+description: Burn animated word-by-word highlight captions (pop / karaoke / clean styles) into vertical video from an SRT transcript, or emit just the styled .ass sidecar. Use when a finished vertical video (Shorts / TikTok / Reels) needs burned-in animated captions locally, or when an .ass with per-word highlight events is needed for another renderer. Word timing inside each cue is ESTIMATED from cue-level SRT — never present it as true word-level alignment. Install: pipx install git+https://github.com/jasveerai88/shorts-caption-studio
 ---
 
 # shorts-caption-studio — agent skill
+
+## Install
+
+```bash
+pipx install git+https://github.com/jasveerai88/shorts-caption-studio
+# or: pip install git+https://github.com/jasveerai88/shorts-caption-studio
+```
+
+(Not on PyPI — the git+ form is the install.) This puts the
+`shorts-caption-studio` command on your PATH. From a checkout, the
+equivalent is `python3 src/shorts_caption_studio.py …` (Python 3.10+,
+standard library only, zero dependencies). Burn-in additionally
+needs the system ffmpeg + ffprobe on PATH; `--ass-only` does not.
 
 ## Purpose
 
@@ -43,14 +56,14 @@ Do NOT use when:
 
 ```bash
 # Burn in (default style pop; writes <video>.captioned.mp4)
-python3 src/shorts_caption_studio.py VIDEO.mp4 --captions VIDEO.srt
-python3 src/shorts_caption_studio.py VIDEO.mp4 --captions VIDEO.srt \
+shorts-caption-studio VIDEO.mp4 --captions VIDEO.srt
+shorts-caption-studio VIDEO.mp4 --captions VIDEO.srt \
     --style karaoke --out FINAL.mp4
-python3 src/shorts_caption_studio.py VIDEO.mp4 --captions VIDEO.srt --json
+shorts-caption-studio VIDEO.mp4 --captions VIDEO.srt --json
 
 # Sidecar only (pure Python — works without ffmpeg)
-python3 src/shorts_caption_studio.py --ass-only VIDEO.srt -o VIDEO.ass
-python3 src/shorts_caption_studio.py --ass-only VIDEO.srt -o VIDEO.ass \
+shorts-caption-studio --ass-only VIDEO.srt -o VIDEO.ass
+shorts-caption-studio --ass-only VIDEO.srt -o VIDEO.ass \
     --style clean --json
 ```
 

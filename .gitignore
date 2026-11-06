@@ -4,6 +4,11 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+dist/
+build/
+*.egg-info/
+launch/
+.muse-github-snapshot-sync.json
 # the demo video is generated, not committed — rebuild it with
 # python3 examples/make_examples.py
 examples/*.mp4

@@ -55,7 +55,7 @@ import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
-VERSION = "0.1.0"
+VERSION = "1.0.0"
 TOOL = "shorts-caption-studio"
 
 PLAY_RES_X = 1080

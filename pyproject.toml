@@ -5,10 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "shorts-caption-studio"
 version = "1.0.0"
-description = "Burn animated word-by-word highlight captions (pop / karaoke / clean) into vertical video from an SRT transcript, locally and free — or emit just the styled .ass sidecar. Pure Python standard library; word timing inside each cue is ESTIMATED from cue-level SRT and labelled as such."
+description = "Add animated word-by-word captions to YouTube Shorts, TikTok and Reels: burn pop, karaoke or clean highlight captions from your own SRT with ffmpeg, or export the styled .ass file. Free, local, pure Python."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
     { name = "Jasveer Singh" },
 ]
@@ -27,7 +27,6 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -42,6 +41,7 @@ dependencies = []
 Homepage = "https://github.com/jasveerai88/shorts-caption-studio"
 Repository = "https://github.com/jasveerai88/shorts-caption-studio"
 Issues = "https://github.com/jasveerai88/shorts-caption-studio/issues"
+Changelog = "https://github.com/jasveerai88/shorts-caption-studio/blob/main/CHANGELOG.md"
 
 [project.scripts]
 shorts-caption-studio = "shorts_caption_studio:main"

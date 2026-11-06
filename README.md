@@ -21,8 +21,8 @@ The captions that make Shorts hold attention — each word lighting up as it's s
 ## Quick start
 
 ```bash
-pipx install git+https://github.com/jasveerai88/shorts-caption-studio
-# or: pip install git+https://github.com/jasveerai88/shorts-caption-studio
+pipx install shorts-caption-studio
+# or: pip install shorts-caption-studio
 
 # from a clone, so the bundled examples are on disk:
 python3 examples/make_examples.py   # once: generates examples/demo.mp4 (needs ffmpeg)
